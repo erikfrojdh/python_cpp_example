@@ -5,7 +5,7 @@ if __name__ == '__main__':
     
                       
     c_ext = Extension("_example",
-                      sources = ["example.cpp", "function.cpp"], )
+                      sources = ["example/example.cpp", "example/function.cpp"], )
                       
 #    c_ext.extra_compile_args = ['`root-config --cflags --glibs`']
     
