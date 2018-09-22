@@ -104,7 +104,7 @@ static PyObject *add(PyObject *self, PyObject *args)
 
     //Now call add wih pointers and size
     auto size = PyArray_Size(a_array);
-    add(a, b, result, size);
+    cpp_add(a, b, result, size);
 
     //Clean up
     Py_DECREF(a_array);
