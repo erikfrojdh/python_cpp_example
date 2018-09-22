@@ -21,7 +21,7 @@ PyDoc_STRVAR(
     "result: numpy_array\n"
     "   added numbers\n\n");
 
-//List available functions
+//function declaration
 static PyObject *add(PyObject *self, PyObject *args);
 
 //Module specification
