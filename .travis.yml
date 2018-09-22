@@ -1,9 +1,13 @@
 language: python
-python:
-  - "3.4"
-  - "3.5"
-  - "3.6"
-  - "3.7"
+
+os: linux
+dist: trusty
+
+env: 
+  matrix: 
+     - CONDA_PY=3.5
+     - CONDA_PY=3.6
+     - CONDA_PY=3.7
 
 install:
   - sudo apt-get update
@@ -14,7 +18,7 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
   - conda info -a
-  - conda create -q -n myenv python=$TRAVIS_PYTHON_VERSION numpy pytest
+  - conda create -q -n myenv python=$CONDA_PY numpy pytest
   - source activate myenv
   - python setup.py install
 
