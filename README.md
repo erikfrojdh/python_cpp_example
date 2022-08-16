@@ -3,7 +3,9 @@
 Minimal example building a C++ python extension. 
 
 Useful links:
+ * [Extending Python with C or C++](https://docs.python.org/3/extending/extending.html)
  * [Using NumPy C-API](https://numpy.org/doc/stable/user/c-info.html)
+
 
 
 ### Build instructions
