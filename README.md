@@ -1,4 +1,30 @@
 # python_cpp_example
-Simple Python C++ extension that adds two numbers or does element wise addition of two numpy arrays. Code accompanying this blog post: [http://www.erikfrojdh.com/python/interfacing-python-numpy-from-c-part-1-3/](http://www.erikfrojdh.com/python/interfacing-python-numpy-from-c-part-1-3/)
 
-[![Build Status](https://travis-ci.org/erikfrojdh/python_cpp_example.svg?branch=master)](https://travis-ci.org/erikfrojdh/python_cpp_example)
+Minimal example building a C++ python extension. 
+
+Useful links:
+ * [Using NumPy C-API](https://numpy.org/doc/stable/user/c-info.html)
+
+
+### Build instructions
+
+```bash
+
+#build in place and use from the same folder
+#sometimes necessary to remove build folder and .so
+#by hand
+python setup.py build_ext --inplace
+
+
+```
+
+To use make sure that the .so and potentially python files are in PYTHONPATH (or installed in developer mode)
+
+```bash
+#conda
+conda develop install . 
+
+#or with pip
+pip install --editable .
+```
+
