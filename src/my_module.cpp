@@ -1,7 +1,10 @@
 #define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
-#include "function.h" //this is the function that we want to call
+#define PY_SSIZE_T_CLEAN
 #include <Python.h>
 #include <numpy/arrayobject.h>
+
+
+#include "function.h" //this is the function that we want to call
 
 // Docstring
 static char module_docstring[] =
